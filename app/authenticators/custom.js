@@ -91,6 +91,7 @@ export default BaseAuthenticator.extend({
     return new Ember.RSVP.Promise((resolve, reject) => {
       var data = { name: credentials.identification, password: credentials.password };
       this._makeRequest('POST', data).then((response) => {
+        console.log("User checked out credentials ");
         response.name = data.name;
         response.expires_at = this._absolutizeExpirationTime(600);
         this._checkUser(response).then((user) => {

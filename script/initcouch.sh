@@ -1,7 +1,7 @@
 #!/bin/bash
 
 URL="localhost"
-PORT="5984"
+PORT="9200"
 
 if [ -z "${1}" ] || [ -z "${2}" ]; then
     HOST="http://$URL:$PORT"
